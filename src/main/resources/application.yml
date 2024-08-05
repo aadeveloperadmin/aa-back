@@ -1,0 +1,44 @@
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: mmonfdez@gmail.com
+    password: ylzwsiwalywzmwtm
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+  application:
+    name: demo
+  jmx:
+    enabled: false
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  lifecycle:
+    timeout-per-shutdown-phase: 20s # graceful shutdown timeout
+
+
+# SERVER
+server:
+  port: 8889
+  sessionTimeout: 30
+  servlet:
+    context-path: /
+  forward-headers-strategy: framework
+  error:
+    include-message: always
+  shutdown: graceful # graceful shutdown
+
+#SMTP
+smtp:
+  host: smtp.gmail.com
+  port: 587
+  sender: mmonfdez@gmail.com
+  password: ylzwsiwalywzmwtm
+  billin: mmonfdez@gmail.com
+  subject: AAldea Music Info
